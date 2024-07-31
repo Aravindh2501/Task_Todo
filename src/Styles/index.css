@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", monospace;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --black: #000000;
+    --border: #ececec;
+    --grey: #f5f5f5;
+    --white: #ffffff;
+    --green: #12d712;
+    --blue: #2d79f2;
+    --shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px, rgba(0, 0, 0, 0.1) 0px 0px 1px;
+    --bor-radius: 1rem;
+    --card-width: 30rem;
+    --card-height: 30rem;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--grey);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 10px;
+}
+
+
+
+.Todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    border-radius: var(--bor-radius);
+    background-color: var(--white);
+    padding: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button.add-group-btn {
+    background: var(--blue);
+    color: var(--white);
+}
+
+button.add-user-btn {
+    background: var(--green);
+    color: var(--white);
+}
+
+input {
+    border: 1px solid var(--border);
+    background: var(--grey);
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.todo_user .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.todo_user .top h4 {
+    font-size: 1.5rem;
+}
+
+.todo_user .add_input {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.todo_user .add_input button {
+    margin-left: 8px;
+}
+
+.todo_user .content ul {
+    height: 20rem;
+    overflow-y: scroll;
+    padding: 2px 10px 10px;
+}
+
+.todo_user .content ul li {
+    padding: 12px;
+    background: var(--grey);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.todo_user .content ul li p {
+    font-weight: 600;
+}
